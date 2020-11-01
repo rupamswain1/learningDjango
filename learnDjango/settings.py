@@ -49,12 +49,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'first.urls'
+ROOT_URLCONF = 'learnDjango.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'template')],
+        'DIRS': [os.path.join(BASE_DIR,'template'),os.path.join(BASE_DIR,'travelWebsiteTemplate')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'first.wsgi.application'
+WSGI_APPLICATION = 'learnDjango.wsgi.application'
 
 
 # Database
@@ -118,3 +118,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'travelWebsiteTemplate')
+
+]
+STATIC_ROOT=os.path.join(BASE_DIR,'django_travel_template')

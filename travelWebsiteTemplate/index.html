@@ -197,7 +197,7 @@ http://www.templatemo.com/tm-475-holiday
 			{% for i in dest %}
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="tm-home-box-1 tm-home-box-1-2 tm-home-box-1-center">
-					<img src="{{imgPath}}/{{i.image}}" alt="image" class="img-responsive">
+					<img src="{{i.image.url}}" alt="image" class="img-responsive">
 					<a href="{% static '#' %}">
 						<div class="tm-green-gradient-bg tm-city-price-container">
 							<span>{{i.name}}</span>

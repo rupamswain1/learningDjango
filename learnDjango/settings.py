@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'travelWebsite.apps.TravelwebsiteConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,8 +76,11 @@ WSGI_APPLICATION = 'learnDjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',
+        'USER': 'root',
+        'PASSWORD': 'pheonix',
+        'HOST':'localhost'
     }
 }
 
@@ -123,3 +127,6 @@ STATICFILES_DIRS=[
 
 ]
 STATIC_ROOT=os.path.join(BASE_DIR,'django_travel_template')
+
+MEDIA_url='/img/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'travelImg')

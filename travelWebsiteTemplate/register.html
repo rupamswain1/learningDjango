@@ -11,12 +11,18 @@
    
     <form action="register" method="post">
         {% csrf_token %}
-        <input value="First Name" name="first_name" type="text"><br><br>
-        <input value="Last Name" name="last_name" type="text"><br><br>
-        <input value="user Name" name="username" type="text"><br><br>
-        <input value="Email" name="email" type="email"><br><br>
-        <input value="Password" name="password1" type="password"><br><br>
-        <input value="user Name" name="password2" type="password1"><br><br>
+        {% for message in messages%}
+            {{message}}
+        {% endfor %}
+        <br>
+        <input placeholder="First Name" name="first_name" type="text"><br><br>
+        <input placeholder="Last Name" name="last_name" type="text"><br><br>
+        <input placeholder="user Name" name="username" type="text"><br>
+    
+        <br>
+        <input placeholder="Email" name="email" type="email"><br><br>
+        <input placeholder="Password" name="password1" type="password"><br><br>
+        <input placeholder="Confirm Password" name="password2" type="password"><br><br>
         <input type="submit">
     </form>
     

@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('calc/',include('calc.urls')),
     path('',include('travelWebsite.urls')),
-    path('register1/',include('register.urls'))
+    path('register/',include('register.urls'))
 ]
 urlpatterns= urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
